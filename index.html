@@ -67,12 +67,13 @@
     section {
       padding: 2rem;
     }
-    .about, .mission, .events, .blog, .media, .{
+    .about, .leadership, .mission, .vision, .events, .blog, .media, .{
       max-width: 900px;
-      margin: auto;
+      margin: 2px;
+      
     }
     footer {
-      background: #2d2143;
+      background: #2d2143;  
       color: #fff;
       text-align: center;
       padding: 1rem;
@@ -96,6 +97,7 @@
       padding: 1rem;
       margin-bottom: 1rem;
       background: #fff;
+      border-radius: 20px;
     }
     .comments {
       margin-top: 1rem;
@@ -124,12 +126,7 @@
       cursor: pointer;
       margin-top: 0.2rem;
     }
-    #blog_posts {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      border: 1px solid #ccc;
-    }
+  
     .h1 {
        top: 10px;
     }
@@ -202,7 +199,9 @@
 
   <nav>
     <a href="#about">About</a>
+    <a href="#leadership">Leadership</a>
     <a href="#mission">Mission</a>
+    <a href="#vision">Vision</a>
     <a href="#events">Events</a>
     <a href="#blog">Clan</a>
     <a href="#media">Media</a>
@@ -215,12 +214,24 @@
 
   <section class="about" id="about">
     <h2>About Us</h2>
-    <p>Glorious Clan System is a Christ-centered church committed to raising a holy remnant dedicated to carrying the fire of God's presence and fulfilling His divine purpose.</p>
+    <p>Glorious Clan System is a kingdom-driven movement of believeres united by new covenant of our Lord Jesus Christ, empowered by the Spirit of God, and achored in the truth of Christ. We are people set apart to proclaim the gospel of the kingdom of heaven with signs and wonders follow. 
+      We operate as a spiritually family - structured yet intimate, disciplined yet compassionate and full of love for people of all colors pursuing the glory of God and awakening lives to their divine purpose.</p>
+  </section>
+
+   <section class="leadership" id="leadership">
+    <h2>Our Mission</h2>
+    <p>Our leadership team is a gathering of anointed men and women who serve not by position, but by divine assignment. Each member is called to carry out the kingdom mandate, proclaim the nearness of the kingdom of heaven, awaken lives through the gospel of our Lord Jesus Christ.
+        we lead as a clan, not a corporation -  guided by love, unity, holiness, and submission to the Holy Spirit. </p>
   </section>
 
   <section class="mission" id="mission">
     <h2>Our Mission</h2>
-    <p>To equip and empower God's chosen people with sound doctrine, authentic fellowship, and spiritual discipline—building a global remnant movement that reflects the glory of Jesus Christ.</p>
+    <p>To raise, equip, and release a united family of believers empowered by the authority of Christ to demonstrate the glory of God through healing, deliverance, and kingdom impact.</p>
+  </section>
+
+   <section class="vision" id="vision">
+    <h2>Our Vision</h2>
+    <p>To build a spiritually vibrant clan of kingdom agents who walk in the resurrection power of Christ, proclaiming His gospel and manifesting His glory inevery sphere of influence.</p>
   </section>
 
   <section class="events" id="events">
@@ -251,9 +262,7 @@
       <textarea id="post-content" placeholder="Write your message..." disabled></textarea>
       <button type="submit" class="btn_event" disabled>Post</button>
     </form>
-    <div id="blog_posts">
     <div id="blog-posts"></div>
-    </div>
   </section>
 
   <section class="media" id="media">
