@@ -14,8 +14,8 @@
     }
     body {
       font-family: 'Merriweather', serif;
-      background-color: #f8f6f3;
-      color: #2d2143;
+      background-color: #2e1c4e;
+      color: rgb(247, 243, 243);
       line-height: 1.6;
       padding-top: 140px;
       padding-bottom: 100px;
@@ -202,11 +202,6 @@
     }
 
     img, video { max-width:100%; margin:1rem 0; }
-   /** input, textarea, button, select { display:block; width:100%; margin-bottom:1rem; padding:.5rem; font-size:1rem; }
-    button { cursor:pointer; }
-    .disabled { opacity:.5; pointer-events:none; }
-    .blog-post, .event-item { background:#fff; padding:1rem; margin-bottom:1rem; border-radius:12px; border:1px solid #ccc; }
-    .comments { margin-top:1rem; padding-left:1rem; border-left:3px solid #ccc; }*/
     .reaction-bar span { font-size:1.2rem; margin-right:.5rem; cursor:pointer; }
     .leaderboard, .badges, .streak, .profile-settings { background:#fff; padding:1rem; border-radius:12px; margin-bottom:2rem; }
     .badge-tag { background:#f1c40f; color:#fff; padding:.2rem .5rem; border-radius:8px; margin-right:.5rem; }
@@ -277,7 +272,6 @@
     <form id="blogForm" onsubmit="submitPost(event)" class="disabled">
       <input type="text" id="post-title" placeholder="Post Title" required />
       <textarea id="post-content" placeholder="Content..." required></textarea>
-     <!--<input type="file" id="post-media" accept="image/*" /> -->
       <button type="submit" class="btn_event">Submit Post</button>
     </form>
     <div id="postsContainer"></div>
@@ -313,7 +307,7 @@
     <form id="profileForm">
   <input type="text" id="profile-name" placeholder="Name" required />
   <textarea id="profile-bio" placeholder="Bio"></textarea>
- <!-- <input type="file" id="profile-picture" accept="image/*" />-->
+  <input type="file" id="profile-picture" accept="image/*" />
   <button type="submit">Save Profile</button>
 </form>
 
