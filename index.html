@@ -353,12 +353,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #fff;
-      text-shadow: 2px 2px 4px #000;
+      color: #ffffffe8;
+      text-shadow: 10px 10px 10px #1303f0;
       text-align: center;
     }
-    .hero h1 {
-      font-size: 3rem;
+    .hero h2 {
+      font-size: 5rem;
     }
     section {
       padding: 2rem;
@@ -479,6 +479,18 @@
       font-size: 2rem;
       margin-top: 20px;
     }
+    .media-gallery{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .media-gallery img {
+      width: 400px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
 
     img, video { max-width:100%; margin:1rem 0; }
    /** input, textarea, button, select { display:block; width:100%; margin-bottom:1rem; padding:.5rem; font-size:1rem; }
@@ -520,14 +532,14 @@
 <div class="hero">
   <h2>Welcome to Our Clan!</h2>
 </div>
-<section class="about" id="about">
+ <section class="about" id="about">
     <h2>About Us</h2>
     <p>Glorious Clan System is a kingdom-driven movement of believeres united by new covenant of our Lord Jesus Christ, empowered by the Spirit of God, and achored in the truth of Christ. We are people set apart to proclaim the gospel of the kingdom of heaven with signs and wonders follow. 
       We operate as a spiritually family - structured yet intimate, disciplined yet compassionate and full of love for people of all colors pursuing the glory of God and awakening lives to their divine purpose.</p>
   </section>
 
    <section class="leadership" id="leadership">
-    <h2>Our Mission</h2>
+    <h2>Our Leadership</h2>
     <p>Our leadership team is a gathering of anointed men and women who serve not by position, but by divine assignment. Each member is called to carry out the kingdom mandate, proclaim the nearness of the kingdom of heaven, awaken lives through the gospel of our Lord Jesus Christ.
         we lead as a clan, not a corporation -  guided by love, unity, holiness, and submission to the Holy Spirit. </p>
   </section>
@@ -597,8 +609,9 @@
 
  <section class="media" id="media">
   <h2>Media Gallery</h2>
-  <div id="media-gallery">
-    <img src="images/clan.png" alt="Sermon Photo" />
+  <div id="media-gallery" class="media-gallery">
+    <img src="images/clan.png" alt="Sermon Photo"/>
+      <img src="images/clan.png" alt="Sermon Photo"/>
   </div>
 </section>
 
