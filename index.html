@@ -41,8 +41,9 @@
     nav {
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
+      flex-direction: row;
+      gap: 1rem;
+      padding: 0.5rem;
       background: #e0d8f3;
       position: fixed;
       top: 60px;
@@ -225,9 +226,20 @@
   nav {
     display: none;
     flex-direction: column;
-    background-color: #fff;
+    background: #f9f9f9;
+    width: 100%;
+    gap: 0.0000000000003rem;
+    max-height: 100vh;
+    top: 100px;
+    overflow-y: auto;
+    border-top: 1px solid #ccc; /* optional border */
     padding: 10px;
   }
+
+  nav a {
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+}
 
   nav.active {
     display: flex;
@@ -236,6 +248,10 @@
   .hamburger {
     display: block;
   }
+
+  .hero h2 {
+      font-size: 1.5rem;
+    }
 }
 
   </style>
