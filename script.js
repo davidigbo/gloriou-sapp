@@ -106,39 +106,19 @@ function saveProfile(e) {
 
   const name = document.getElementById("profile-name").value.trim();
   const bio = document.getElementById("profile-bio").value.trim();
-  const picInput = document.getElementById("profile-picture");
 
   if (!name) return alert("Name is required for profile");
 
-  function saveProfileData(pictureData) {
-    const profileObj = {
-      id: Date.now(),
-      name,
-      bio,
-      picture: pictureData || null,
-    };
-    profiles.unshift(profileObj);
-    localStorage.setItem("clan_profiles", JSON.stringify(profiles));
-    renderProfiles();
-    document.getElementById("profileForm").reset();
-  }
+  const profileObj = {
+    id: Date.now(),
+    name,
+    bio
+  };
 
-  if (picInput.files.length > 0) {
-    const file = picInput.files[0];
-    const reader = new FileReader();
-    reader.onload = function(event) {
-      // Save profile after image is loaded
-      saveProfileData(event.target.result);
-    };
-    reader.onerror = function() {
-      alert("Failed to read image file");
-      saveProfileData(null);
-    }
-    reader.readAsDataURL(file);
-  } else {
-    // No image selected, save profile directly
-    saveProfileData(null);
-  }
+  profiles.unshift(profileObj);
+  localStorage.setItem("clan_profiles", JSON.stringify(profiles));
+  renderProfiles();
+  document.getElementById("profileForm").reset();
 }
 
 function likePost(id) {
@@ -255,13 +235,7 @@ function renderProfiles() {
     const div = document.createElement("div");
     div.className = "profile";
 
-    let picHtml = "";
-    if (profile.picture) {
-      picHtml = `<img src="${profile.picture}" alt="Profile Picture" style="max-width: 150px; max-height: 150px; border-radius: 50%;" />`;
-    }
-
     div.innerHTML = `
-      ${picHtml}
       <h4>${escapeHtml(profile.name)}</h4>
       <p>${escapeHtml(profile.bio)}</p>
       <button onclick="deleteProfile(${profile.id})">🗑️ Delete</button>
