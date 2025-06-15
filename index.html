@@ -220,6 +220,7 @@
   display: none;
   padding: 10px;
 }
+/* Header layout */
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -228,17 +229,21 @@
     flex-direction: column;
     background: #f9f9f9;
     width: 100%;
-    gap: 0.0000000000003rem;
+    gap: 0.000000000000000001rem;
     max-height: 100vh;
     top: 100px;
     overflow-y: auto;
     border-top: 1px solid #ccc; /* optional border */
-    padding: 10px;
+    padding: 10px 0;
+    font-size: 10px;
   }
 
   nav a {
   padding: 0;
   border-bottom: 1px solid #ddd;
+  top: 2px;
+  font-size: 5.9px;
+  font-weight: 150px;
 }
 
   nav.active {
@@ -247,11 +252,21 @@
 
   .hamburger {
     display: block;
+    position: fixed;
+    padding: 14px;
+    max-height: 100vh;
   }
 
   .hero h2 {
       font-size: 1.5rem;
     }
+
+    /* .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+} */
 }
 
   </style>
@@ -259,17 +274,17 @@
 <body>
 
   <header>
+  <div class="header-content">
     <div class="logo">
       <img src="images/clan.png" alt="Glorious Clan System Logo" />
     </div>
-    <div class="h1"></div>
-      <h1>Glorious Clan System</h1>
-      <p class="pg">Called. Chosen. Glorious.</p>
+    <h1>Glorious Clan System</h1>
+    <div class="hamburger" id="hamburger">☰</div>
   </div>
-  </header>
+  <p class="pg">Called. Chosen. Glorious.</p>
+</header>
 
   <div class="nav-container">
-  <div class="hamburger" id="hamburger">☰</div>
   <nav id="nav-menu">
     <a href="#login">Login</a>
     <a href="#about">About</a>
