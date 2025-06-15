@@ -9,6 +9,13 @@ let posts = JSON.parse(localStorage.getItem("clan_posts")) || [];
 let events = JSON.parse(localStorage.getItem("clan_events")) || [];
 let profiles = JSON.parse(localStorage.getItem("clan_profiles")) || [];
 
+const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
 function loginUser(e) {
   if (e && e.preventDefault) e.preventDefault();
 

@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glorious Clan System</title>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
   <style>
+   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
        * {
       margin: 0;
@@ -209,6 +211,33 @@
     .leaderboard, .badges, .streak, .profile-settings { background:#fff; padding:1rem; border-radius:12px; margin-bottom:2rem; }
     .badge-tag { background:#f1c40f; color:#fff; padding:.2rem .5rem; border-radius:8px; margin-right:.5rem; }
     .avatar-preview { width:80px; height:80px; border-radius:50%; object-fit:cover; }
+
+    /* Base styles */
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  padding: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -223,18 +252,21 @@
   </div>
   </header>
 
-<nav>
-   <a href="#login">Login</a>
-  <a href="#about">About</a>
-   <a href="#leadership">Leadership</a>
+  <div class="nav-container">
+  <div class="hamburger" id="hamburger">☰</div>
+  <nav id="nav-menu">
+    <a href="#login">Login</a>
+    <a href="#about">About</a>
+    <a href="#leadership">Leadership</a>
     <a href="#mission">Mission</a>
     <a href="#vision">Vision</a>
     <a href="#events">Events</a>
     <a href="#blog">Clan</a>
     <a href="#media">Media</a>
-  <a href="#profile">Profile</a>
-  <a href="#leaderboard">Leaderboard</a>
-</nav>
+    <a href="#profile">Profile</a>
+    <a href="#leaderboard">Leaderboard</a>
+  </nav>
+  </div>
 
 <div class="hero">
   <h2>Welcome to Our Clan!</h2>
